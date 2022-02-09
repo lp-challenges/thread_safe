@@ -1,3 +1,6 @@
+#### reads should be able to happen concurrently, as long as there isn’t a write happening at the same time.
+#### no other blocks may be scheduled from the queue while the WRITE process runs
+
 ### Serial Queues
 Only one process can run at a time. If many processes are stuffed in a queue to modify the array, the serial queue will only let one process execute at a time; the array is safe from concurrent processes by design.
 
